@@ -13,7 +13,7 @@ def get_credit():
 
     glbgpt.send_otp(email)
     print("Waiting for OTP...")
-    time.sleep(7)
+    time.sleep(5)
     otp = mail_tm.get_otp(token)
     print(otp)
     glbgpt.verify_otp(email, otp)

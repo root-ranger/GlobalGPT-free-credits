@@ -38,9 +38,16 @@ def create_account_and_get_token():
     
 
 def get_otp(token):
-    headers["Authorization"] = f"Bearer {token}"
-    response = requests.get(f"{BASE_URL}/messages", headers=headers)
-    otp = json.loads(response.text)[0]["intro"][47:47+6]
+    while True:
+        otp = ""
+        headers["Authorization"] = f"Bearer {token}"
+        response = requests.get(f"{BASE_URL}/messages", headers=headers)
+        try:
+            otp = json.loads(response.text)[0]["intro"][47:47+6]
+            break
+        except IndexError:
+            print("Error: OTP not found in the message.")
+            print("Response:", response.text)
 
     return otp
 
