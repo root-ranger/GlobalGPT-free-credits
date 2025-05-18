@@ -1,24 +1,24 @@
 python3 main.py &&
-echo "Done 1" &&
+echo "---------------------Done 1----------------------" &&
 python3 main.py &&
-echo "Done 2" &&
+echo "---------------------Done 2----------------------" &&
 python3 main.py &&
-echo "Done 3" &&
+echo "---------------------Done 3----------------------" &&
 python3 main.py &&
-echo "Done 4" &&
+echo "---------------------Done 4----------------------" &&
 python3 main.py &&
-echo "Done 5" &&
+echo "---------------------Done 5----------------------" &&
 python3 main.py &&
-echo "Done 6" &&
+echo "---------------------Done 6----------------------" &&
 python3 main.py &&
-echo "Done 7" &&
+echo "---------------------Done 7----------------------" &&
 python3 main.py &&
-echo "Done 8" &&
+echo "---------------------Done 8----------------------" &&
 python3 main.py &&
-echo "Done 9" &&
+echo "---------------------Done 9----------------------" &&
 python3 main.py &&
-echo "Done 10" &&
+echo "---------------------Done 10----------------------" &&
 python3 main.py &&
-echo "Done 11" &&
-python3 main.py
-echo "Done 12" &&
+echo "---------------------Done 11----------------------" &&
+python3 main.py &&
+echo "---------------------Done 12----------------------"
