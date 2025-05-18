@@ -22,12 +22,13 @@ def create_account_and_get_token():
             print("Error creating account:", response.text)
             continue
         else:
+            try:
+                response = json.loads(response.text)
+                data["id"] = response["id"]
+                data["address"] = response["address"]
+            except Exception as e:
+                continue
             break        
-    
-    response = json.loads(response.text)
-
-    data["id"] = response["id"]
-    data["address"] = response["address"]
     
     response = requests.post(f"{BASE_URL}/token", headers=headers, json={"address": address, "password": password})
     response = json.loads(response.text)
