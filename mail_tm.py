@@ -1,4 +1,4 @@
-import requests
+kimport requests
 import time, json
 
 
@@ -46,8 +46,8 @@ def get_otp(token):
         try:
             otp = json.loads(response.text)[0]["intro"][47:47+6]
             break
-        except (IndexError, JSONDecodeError):
-            print("Error: OTP not found in the message.")
+        except Exception as e:
+            print("Error: OTP not found in the message.", e)
             print("Response:", response.text)
 
     return otp
