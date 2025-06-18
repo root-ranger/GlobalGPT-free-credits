@@ -46,7 +46,7 @@ def get_otp(token):
         try:
             otp = json.loads(response.text)[0]["intro"][47:47+6]
             break
-        except IndexError:
+        except IndexError, JSONDecodeError:
             print("Error: OTP not found in the message.")
             print("Response:", response.text)
 
