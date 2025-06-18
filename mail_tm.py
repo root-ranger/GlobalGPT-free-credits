@@ -1,4 +1,4 @@
-kimport requests
+import requests
 import time, json
 
 
