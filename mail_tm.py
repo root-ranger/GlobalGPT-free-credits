@@ -14,7 +14,7 @@ def create_account_and_get_token():
     while True:
         data = {}
 
-        address = f"{str(int(time.time()))}@punkproof.com"
+        address = f"{str(int(time.time()))}@somoj.com"
         password = str(int(time.time() * 1000))[-12:]
         response = requests.post(f"{BASE_URL}/accounts", headers=headers, json={"address": address, "password": password})
         print("Response:", response.text)
