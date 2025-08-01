@@ -34,6 +34,7 @@ def create_account_and_get_token():
     response = json.loads(response.text)
 
     data["token"] = response["token"]
+    print("Account created successfully:", data)
     
     return data
     
